@@ -1,2 +1,2 @@
-# CreateBoard
-a private project
+# 개인프로젝트 진행
+기본 게시판 작업 후에 기능 추가예정
