@@ -1,0 +1,88 @@
+# 서버 포트 설정
+  server:
+    port: 8080
+
+# database 연동 설정
+  spring:
+    datasource:
+      url: jdbc:mysql://localhost:3306/aidev
+      username: root
+      password: 1234
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # spring data jpa 설정
+  jpa:
+    defer-datasource-initialization: true
+    hibernate.ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+  #  h2.console.enabled: true
+  sql.init.mode: always
+  data.rest:
+    base-path: /api # Api 경로
+    detection-strategy: annotated # annotated 내가 걸어논 이들만 들어올 수 있음
+  thymeleaf3.decoupled-logic: true  # thymeleaf 구문을 따로 분리시켜서 작성하고, index를 순수 마크업 상태로 유지시키는 방법
+
+
+
+#      debug: false
+#management.endpoints.web.exposure.include: "*"
+#
+#logging:
+#  level:
+#    com.supreme.shoekream: debug
+#    org.springframework.web.servlet: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+#
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/aidev
+#    username: root
+#    password: 1234
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    defer-datasource-initialization: true
+#    hibernate.ddl-auto: create
+#    show-sql: true
+#    properties:
+#      hibernate.format_sql: true
+#      hibernate.default_batch_fetch_size: 100
+#  #  h2.console.enabled: true
+#  sql.init.mode: always
+#  data.rest:
+#    base-path: /api # Api 경로
+#    detection-strategy: annotated # annotated 내가 걸어논 이들만 들어올 수 있음
+#  thymeleaf3.decoupled-logic: true  # thymeleaf 구문을 따로 분리시켜서 작성하고, index를 순수 마크업 상태로 유지시키는 방법
+#server:
+#  port: 9091
+
+
+###########################################################################
+# 유튭 yml 자료
+###########################################################################
+
+## 서버 포트 설정
+#  server:
+#    port: 8082
+#
+## database 연동 설정
+#  spring:
+#    datasource:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#      username: user_codingrecipe
+#      password: 1234
+#
+#    thymeleaf:
+#      cache: false
+#
+#    # spring data jpa 설정
+#
+#    jpa:
+#      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#      open-in-view: false
+#      show-sql: true
+#      hibernate:
+#        ddl-auto: create
